@@ -1,3 +1,5 @@
+// Gameboard()   1st Factory Function, with several callback functions (methods)
+
 function Gameboard() {
     const rows = 6;
     const columns = 7;
@@ -29,6 +31,9 @@ function Gameboard() {
     return { getBoard, dropToken, printBoard };
   }
   
+
+  // Cell() 2nd Factory Function with several methods
+
   function Cell() {
     let value = 0;
   
@@ -44,6 +49,8 @@ function Gameboard() {
     };
   }
   
+  // GameController()  3rd Factory Function with methods (return methods so , they're available);
+
   function GameController(
     playerOneName = "Player One",
     playerTwoName = "Player Two"
@@ -94,6 +101,8 @@ function Gameboard() {
       getBoard: board.getBoard
     };
   }
+
+  // ScreenController() 4th Factory Function with methods
   
   function ScreenController() {
     const game = GameController();
